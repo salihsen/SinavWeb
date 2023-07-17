@@ -1,0 +1,37 @@
+﻿@model Sinav.Entities.Concrete.User
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" asp-action="Update" asp-controller="User">
+                    <h4 class="card-title">İsim Soyisim</h4>
+                    <div class="basic-form">
+                        <div class="form-group ">
+                            <input type="text" class="form-control" placeholder="İsim Soyisim" name="namelastname" asp-for="NameLastName">
+                        </div>
+                        <h4 class="card-title">KullanıcıAdı</h4>
+                        <div class="basic-form">
+                            <div class="form-group ">
+                                <input type="text" class="form-control" placeholder="Kullanıcı Adı" name="username" asp-for="UserName">
+                            </div>
+                            <h4 class="card-title">Sifre</h4>
+                            <div class="basic-form">
+                                <div class="form-group ">
+                                    <input type="text" class="form-control" placeholder="Sifre" name="password" asp-for="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="isadmin" asp-for="IsAdmin">
+                                    <label class="form-check-label">Admin Mi</label>
+                                </div>
+                            </div>
+                            <input type="hidden" asp-for="ID" />
+                            <button type="submit" class="btn btn-dark">Güncelle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

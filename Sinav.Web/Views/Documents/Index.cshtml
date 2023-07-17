@@ -1,0 +1,27 @@
+﻿@model Sinav.Web.Models.DocumentsListViewModel
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Dökümanlar</h4>
+        <div class="table-responsive">
+            <table class="table table-bordered verticle-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">Döküman</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Documents)
+                    {
+                        <tr>
+                            <td>@item.Path</td>
+                            <td>
+                                <span><a asp-action="Update" asp-controller="Documents" asp-route-documentsID="@item.ID" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i> </a><a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a></span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

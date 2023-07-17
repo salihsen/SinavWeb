@@ -1,0 +1,10 @@
+﻿@model Sinav.Web.Models.UserExamsListViewModel
+
+
+<ul aria-expanded="false">
+    @foreach (var item in Model.UserExams)
+    {
+        <option value="@item.ID">@item.UserID</option>
+
+    }
+</ul>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\plugins\jqvmap\js\maps\" />
+    <Folder Include="wwwroot\assets\plugins\summernote\css\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sinav.Business\Sinav.Business.csproj" />
+    <ProjectReference Include="..\Sinav.Core\Sinav.Core.csproj" />
+    <ProjectReference Include="..\Sinav.Entities\Sinav.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,10 @@
+﻿@model Sinav.Web.Models.QuizzesListViewModel
+
+
+<ul aria-expanded="false">
+    @foreach (var item in Model.Quizzes)
+    {
+        @*<li><a href="./email-inbox.html">@item.Name</a></li>*@
+        <option value="@item.ID">@item.Name</option>
+    }
+</ul>

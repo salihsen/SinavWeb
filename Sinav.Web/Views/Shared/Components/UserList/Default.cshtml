@@ -1,0 +1,12 @@
+﻿@model Sinav.Web.Models.UserListViewModel
+
+
+<ul aria-expanded="false">
+    @foreach (var item in Model.Users)
+    {
+        if (item.IsActive == true)
+        {
+            <option value="@item.ID">@item.NameLastName</option>
+        }
+    }
+</ul>

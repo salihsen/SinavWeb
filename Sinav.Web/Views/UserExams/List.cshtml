@@ -1,0 +1,31 @@
+﻿@model Sinav.Web.Models.UserExamsListViewModel
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Sınav Listele</h4>
+        <div class="table-responsive">
+            <table class="table table-bordered verticle-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">Sınav</th>
+                        <th scope="col">Kullanıcı Adı</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.UserExams)
+                    {
+                        <tr>
+                            <td>@item.QuizzesID</td>
+                            <td>@item.UserID</td>
+                            <td>
+                                @*href="~/User/Update?userID=item.ID"*@
+                                <span><a asp-action="Update" asp-controller="User" asp-route-userID="@item.ID" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i> </a><a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a></span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

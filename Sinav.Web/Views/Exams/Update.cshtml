@@ -1,0 +1,41 @@
+﻿@model Sinav.Entities.Concrete.Quizzes
+<form method="post" asp-action="Update" asp-controller="Exams">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Sınav Güncelleme</h4>
+                    <div class="basic-form">
+                        <div class="form-group ">
+                            <label>Sınav</label>
+                            <input type="text" class="form-control" placeholder="Sınav" name="Name" asp-for="Name">
+                        </div>
+                    </div>
+                    <h4 class="card-title">Soru Güncelleme</h4>
+                    <div class="basic-form">
+                        <div class="form-group ">
+                            <label>Soru</label>
+                            <input type="text" class="form-control" placeholder="Soru" name="name">
+                        </div>
+                    </div>
+                    <h4 class="card-title">Şık Güncelleme</h4>
+                    <div class="basic-form">
+                        <div class="form-group">
+                            <label>Şıklar</label>
+                            <input type="text" class="form-control" placeholder="Şık" name="name">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                @for (int i = 0; i < Model.ID; i++)
+                                {
+                                <label class="form-check-label">Doğru Cevap</label>
+                                }
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
